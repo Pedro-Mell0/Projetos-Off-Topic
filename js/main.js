@@ -77,15 +77,19 @@ function atualizarTotal() {
         const subtotal = quantidade * preco;
         const subtotalAumentado = quantidade * precoAumentado;
 
-        document.getElementById(`subtotal${capitalize(item)}`).innerText = `R$ ${subtotal},00`;
-        document.getElementById(`subtotalAumentado${capitalize(item)}`).innerText = `R$ ${subtotalAumentado},00`;
+        document.getElementById(`subtotal${capitalize(item)}`).innerText = formatarNumero(subtotal);
+        document.getElementById(`subtotalAumentado${capitalize(item)}`).innerText = formatarNumero(subtotalAumentado);
 
         totalGeral += subtotal;
         totalComAumento += subtotalAumentado;
     });
 
-    document.getElementById("total").innerText = `R$ ${totalGeral},00`;
-    document.getElementById("totalAumentado").innerText = `R$ ${totalComAumento},00`;
+    document.getElementById("total").innerText = formatarNumero(totalGeral);
+    document.getElementById("totalAumentado").innerText = formatarNumero(totalComAumento);
+}
+
+function formatarNumero(valor) {
+    return `R$ ${valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
 function capitalize(str) {
