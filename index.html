@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Calculadora Aura</title>
+</head>
+<body>
+    <header style="background-image: url('img/MembrosBackground.png');">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Calculadora Aura</h1>
+                <ul class="ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><button class="btn" onclick="carregarJogo()">Jogo honesto</button></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-separador"></div>
+
+            <div class="btn-container">
+                <h2>Selecione a categoria do cliente -> </h2>
+                <!-- Botão de CNPJ recebe a classe 'selecionado' automaticamente -->
+                <button id="btn-cnpj" class="btn-opcao" data-categoria="CNPJ">CNPJ</button>
+                <button id="btn-parceria" class="btn-opcao" data-categoria="PARCERIA">PARCERIA</button>
+                <button id="btn-cpf" class="btn-opcao" data-categoria="CPF">CPF</button>
+            </div>
+
+            <div class="nav-separador-dois"></div>
+
+            <!-- Seções de preços e contadores -->
+            <section class="icon-container">
+                <h2>Pente Extendido</h2>
+                <div class="contador">
+                    <button class="btn-contador" id="subtrairPente">-</button>
+                    <input type="number" id="contadorPente" value="0" min="0">
+                    <button class="btn-contador" id="adicionarPente">+</button>
+                    <span class="subtotal" id="subtotalPente">R$ 0,00</span>
+                    <span class="subtotal-aumentado" id="subtotalAumentadoPente">R$ 0,00</span>
+                </div>
+            </section>
+            
+            <section class="icon-container">
+                <h2>Silenciador</h2>
+                <div class="contador">
+                    <button class="btn-contador" id="subtrairSilenciador">-</button>
+                    <input type="number" id="contadorSilenciador" value="0" min="0">
+                    <button class="btn-contador" id="adicionarSilenciador">+</button>
+                    <span class="subtotal" id="subtotalSilenciador">R$ 0,00</span>
+                    <span class="subtotal-aumentado" id="subtotalAumentadoSilenciador">R$ 0,00</span>
+                </div>
+            </section>
+            
+            <section class="icon-container">
+                <h2>Empunhadora</h2>
+                <div class="contador">
+                    <button class="btn-contador" id="subtrairEmpunhadora">-</button>
+                    <input type="number" id="contadorEmpunhadora" value="0" min="0">
+                    <button class="btn-contador" id="adicionarEmpunhadora">+</button>
+                    <span class="subtotal" id="subtotalEmpunhadora">R$ 0,00</span>
+                    <span class="subtotal-aumentado" id="subtotalAumentadoEmpunhadora">R$ 0,00</span>
+                </div>
+            </section>
+            
+            <section class="icon-container">
+                <h2>Mira Holográfica</h2>
+                <div class="contador">
+                    <button class="btn-contador" id="subtrairMira">-</button>
+                    <input type="number" id="contadorMira" value="0" min="0">
+                    <button class="btn-contador" id="adicionarMira">+</button>
+                    <span class="subtotal" id="subtotalMira">R$ 0,00</span>
+                    <span class="subtotal-aumentado" id="subtotalAumentadoMira">R$ 0,00</span>
+                </div>
+            </section>
+            
+            <section class="icon-container">
+                <h2>Lanterna</h2>
+                <div class="contador">
+                    <button class="btn-contador" id="subtrairLanterna">-</button>
+                    <input type="number" id="contadorLanterna" value="0" min="0">
+                    <button class="btn-contador" id="adicionarLanterna">+</button>
+                    <span class="subtotal" id="subtotalLanterna">R$ 0,00</span>
+                    <span class="subtotal-aumentado" id="subtotalAumentadoLanterna">R$ 0,00</span>
+                </div>
+            </section>
+            
+            <section class="icon-container">
+                <h2>Munição de sub.</h2>
+                <div class="contador">
+                    <button class="btn-contador" id="subtrairMunicao">-</button>
+                    <input type="number" id="contadorMunicao" value="0" min="0">
+                    <button class="btn-contador" id="adicionarMunicao">+</button>
+                    <span class="subtotal" id="subtotalMunicao">R$ 0,00</span>
+                    <span class="subtotal-aumentado" id="subtotalAumentadoMunicao">R$ 0,00</span>
+                </div>
+            </section>
+            
+            <div class="total-container">
+                <h2>Total Limpo: <span id="total">R$ 0,00</span></h2>
+                <h2>Total Sujo:    <span id="totalAumentado">  R$ 0,00</span></h2>
+            </div>
+        </div>
+    </header>
+    
+    <div id="jogoContainer"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

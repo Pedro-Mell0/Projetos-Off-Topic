@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #25242731;
+}
+
+.nav-separador {
+    width: 100%;
+    height: 20px; /* Define a altura do espaçamento */
+    border-top: 3px solid #8035db; /* Linha de 2px de espessura e cor roxa */
+    padding-bottom: 20px;
+}
+
+.nav-separador-dois {
+    width: 100%;
+    height: 20px; /* Define a altura do espaçamento */
+    border-top: 3px solid #8035db; /* Linha de 2px de espessura e cor roxa */
+    padding-bottom: 50px;
+}
+
+
+
+/* Container principal */
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Botões principais */
+.btn {
+    background-color: #956df1;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.btn:hover {
+    background-color: #8035db;
+}
+
+/* Animações de botões */
+.btn.animate-btn {
+    animation: animate-outline 1s ease-out infinite;
+}
+
+@keyframes animate-outline {
+    from {
+        box-shadow: 0 0 0 0 rgba(8, 0, 12, 0.5);
+    }
+    to {
+        box-shadow: 0 0 0 15px rgba(38, 6, 98, 0);
+    }
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+    padding-bottom: 30px;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    position: relative;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+nav ul a:not(.btn)::after {
+    content: "";
+    background-color: #a44ff9;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    padding-bottom: 50px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Estilos do header e sections */
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Mantém os elementos alinhados à esquerda */
+}
+
+/* Título (h2) dentro da container */
+.icon-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 20px; /* Garante um espaço fixo de 20px */
+    flex-shrink: 0;
+    min-width: 180px; /* Define uma largura mínima para alinhar os títulos */
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+    margin-bottom: 20px; 
+}
+
+.contador {
+    margin-left: 20px; /* Move o contador para a esquerda */
+}
+
+
+/* Contadores e botões */
+.contador {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 15px;
+}
+
+.btn-contador {
+    background-color: #8035db;
+    color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-contador:hover {
+    background-color: #956df1;
+}
+
+input[type="number"] {
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    border: 2px solid #8035db;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgb(49, 47, 47);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+}
+
+.modal .fechar {
+    background: red;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+}
+
+/* Estilos de outros botões */
+.game-btn {
+    background-color: #8035db;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.game-btn:hover {
+    background-color: #956df1;
+}
+
+/* Resultado do jogo */
+#resultado {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+/* Botão de navegação */
+nav ul li button {
+    border: none;
+    background: #d3d2d7;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+nav ul li button:hover {
+    background: #c6312f;
+}
+
+/* Estilo do título do modal */
+.modal-content h2 {
+    padding-bottom: 15px;
+    color: white;
+}
+
+#contadorPente {
+    width: 70px;
+}
+
+#contadorSilenciador {
+    width: 70px; 
+}
+
+#contadorEmpunhadora {
+    width: 70px; 
+}
+
+#contadorMira {
+    width: 70px; 
+}
+
+#contadorLanterna {
+    width: 70px; 
+}
+
+#contadorMunicao {
+    width: 70px; 
+}
+
+/* Botões categorias */
+
+.btn-container {
+    height: 35px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: left;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para todos os botões (inclusive ao passar o mouse) */
+.btn-opcao {
+    font-family: 'Inter', sans-serif; /* Fonte padrão */
+    border-radius: 10px; /* Borda arredondada */
+    color: white; /* Texto branco */
+    background-color: #956df1; /* Cor de fundo padrão */
+    padding: 12px 18px; /* Espessamento do botão */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave */
+    text-align: center; /* Centraliza o texto */
+    line-height: 0;
+}
+
+/* Efeito de hover */
+.btn-opcao:hover {
+    background-color: #8e48e4; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 0 0 3px rgba(38, 6, 98, 0.5); /* Sombra ao passar o mouse */
+}
+
+/* Cor para o botão selecionado */
+.btn-opcao.selecionado {
+    background-color: #a44ff9; /* Cor de fundo quando selecionado */
+    box-shadow: 0 0 0 3px rgba(38, 6, 98, 0.5); /* Sombra para indicar seleção */
+}
+
+/* Estilo quando o botão está em foco */
+.btn-opcao:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(190, 155, 255, 0.5); /* Sombra quando em foco */
+}
+.btn-container h2 {
+    padding-top: 5px;
+    color: white;
+}
+
+.subtotal {
+    
+    background-color: #956df1;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-block; /* Para se ajustar ao conteúdo */
+    margin-left: 10px; /* Espaço à esquerda */
+}
+
+.subtotal:hover {
+    background-color: #8035db;
+}
+
+.subtotal-aumentado {
+    background-color: #a44ff9;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.subtotal-aumentado:hover {
+    background-color: #8035db;
+}
+
+.total-container {
+    background-color: #8035db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-block;
+    margin-left: 315px;
+    margin-top: 10px
+    
+}
