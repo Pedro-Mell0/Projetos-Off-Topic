@@ -12,23 +12,30 @@
 
 body {
     background-color: #25242731;
+    color: white;
 }
 
-.nav-separador {
+/* Separadores (Nav e Materiais) */
+.nav-separador, .nav-separador-materiais, .nav-separador-dois {
     width: 100%;
     height: 20px; /* Define a altura do espaçamento */
-    border-top: 3px solid #8035db; /* Linha de 2px de espessura e cor roxa */
+    border-top: 3px solid #8035db; /* Linha roxa */
     padding-bottom: 20px;
+
+}
+
+.btn-container h2 {
+font-size: 32px;
+}
+
+.nav-separador-materiais {
+    padding-bottom: 60px;
 }
 
 .nav-separador-dois {
-    width: 100%;
-    height: 20px; /* Define a altura do espaçamento */
-    border-top: 3px solid #8035db; /* Linha de 2px de espessura e cor roxa */
     padding-bottom: 50px;
+    margin-top: 30px;
 }
-
-
 
 /* Container principal */
 .container {
@@ -124,28 +131,27 @@ header {
     min-height: 100vh;
 }
 
+/* Icon-container e títulos */
 .icon-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Mantém os elementos alinhados à esquerda */
+    justify-content: flex-start;
 }
 
-/* Título (h2) dentro da container */
 .icon-container h2 {
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
-    margin-right: 20px; /* Garante um espaço fixo de 20px */
+    margin-right: 20px;
     flex-shrink: 0;
-    min-width: 180px; /* Define uma largura mínima para alinhar os títulos */
-    text-align: left; /* Mantém o texto alinhado à esquerda */
-    margin-bottom: 20px; 
+    min-width: 180px;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .contador {
-    margin-left: 20px; /* Move o contador para a esquerda */
+    margin-left: 20px;
 }
-
 
 /* Contadores e botões */
 .contador {
@@ -248,7 +254,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-top: 10px;
 }
 
-/* Botão de navegação */
+/* Estilo do botão de navegação */
 nav ul li button {
     border: none;
     background: #d3d2d7;
@@ -266,36 +272,11 @@ nav ul li button:hover {
 
 /* Estilo do título do modal */
 .modal-content h2 {
-    padding-bottom: 15px;
+    padding-bottom: 15  px;
     color: white;
 }
 
-#contadorPente {
-    width: 70px;
-}
-
-#contadorSilenciador {
-    width: 70px; 
-}
-
-#contadorEmpunhadora {
-    width: 70px; 
-}
-
-#contadorMira {
-    width: 70px; 
-}
-
-#contadorLanterna {
-    width: 70px; 
-}
-
-#contadorMunicao {
-    width: 70px; 
-}
-
-/* Botões categorias */
-
+/* Botões de categorias */
 .btn-container {
     height: 35px;
     display: flex;
@@ -305,64 +286,58 @@ nav ul li button:hover {
     margin-bottom: 20px;
 }
 
-/* Estilo para todos os botões (inclusive ao passar o mouse) */
+/* Botões de opções (Categoria) */
 .btn-opcao {
-    font-family: 'Inter', sans-serif; /* Fonte padrão */
-    border-radius: 10px; /* Borda arredondada */
-    color: white; /* Texto branco */
-    background-color: #956df1; /* Cor de fundo padrão */
-    padding: 12px 18px; /* Espessamento do botão */
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    color: white;
+    background-color: #956df1;
+    padding: 12px 18px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Transição suave */
-    text-align: center; /* Centraliza o texto */
-    line-height: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 30px;
+
 }
 
-/* Efeito de hover */
 .btn-opcao:hover {
-    background-color: #8e48e4; /* Cor de fundo ao passar o mouse */
-    box-shadow: 0 0 0 3px rgba(38, 6, 98, 0.5); /* Sombra ao passar o mouse */
+    background-color: #8e48e4;
+    box-shadow: 0 0 0 3px rgba(38, 6, 98, 0.5);
 }
 
-/* Cor para o botão selecionado */
 .btn-opcao.selecionado {
-    background-color: #a44ff9; /* Cor de fundo quando selecionado */
-    box-shadow: 0 0 0 3px rgba(38, 6, 98, 0.5); /* Sombra para indicar seleção */
+    background-color: #a44ff9;
+    box-shadow: 0 0 0 3px rgba(38, 6, 98, 0.5);
 }
 
-/* Estilo quando o botão está em foco */
 .btn-opcao:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(190, 155, 255, 0.5); /* Sombra quando em foco */
-}
-.btn-container h2 {
-    padding-top: 5px;
-    color: white;
+    box-shadow: 0 0 0 3px rgba(190, 155, 255, 0.5);
 }
 
+/* Estilo de Subtotal */
 .subtotal {
-    
     background-color: #956df1;
     color: white;
     padding: 8px 15px;
     border-radius: 10px;
     font-size: 14px;
-    transition: 0.3s;
-    display: inline-block; /* Para se ajustar ao conteúdo */
-    margin-left: 10px; /* Espaço à esquerda */
+    display: inline-block;
+    margin-left: 10px;
 }
 
 .subtotal:hover {
     background-color: #8035db;
 }
 
+/* Estilo de Subtotal Aumentado */
 .subtotal-aumentado {
     background-color: #a44ff9;
     color: white;
     padding: 8px 15px;
     border-radius: 10px;
     font-size: 14px;
-    transition: 0.3s;
     display: inline-block;
     margin-left: 10px;
 }
@@ -371,15 +346,69 @@ nav ul li button:hover {
     background-color: #8035db;
 }
 
+/* Estilo do container de Materiais Totais */
 .total-container {
-    background-color: #8035db;
+    background-color: #8035db; /* Fundo roxo */
+    margin-top: 30px;
     color: white;
+    padding: 15px 25px; /* Mais padding para dar mais espaço */
+    border-radius: 10px;
+    font-size: 16px; /* Aumentei a fonte */
+    width: fit-content; 
+    min-width: 100px;
+    box-sizing: border-box;
+    max-width: 950px;
+    
+}
+
+/* Estilo para a lista de materiais dentro do total-container */
+#materiaisTotais {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 18px; /* Tamanho de fonte maior para os materiais */
+    padding: 0;
+}
+
+#materiaisTotais li {
+    margin: 5px 0;
+}
+
+/* Para personalizar os totais "limpos" e "sujos", adicione um fundo ou borda diferenciada */
+#totalLimpo, #totalSujo {
+    background-color: #956df1; /* Cor mais clara de roxo para destacar */
     padding: 8px 15px;
     border-radius: 10px;
     font-size: 14px;
-    transition: 0.3s;
+    margin-left: 10px;
     display: inline-block;
-    margin-left: 315px;
-    margin-top: 10px
-    
 }
+
+#totalLimpo:hover, #totalSujo:hover {
+    background-color: #8035db;
+}
+
+#totalLimpo {
+    background-color: #956df1;
+}
+
+#totalSujo {
+    background-color: #a44ff9;
+}
+
+/* Alinhar o título dos materiais totais ao centro */
+.total-container h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Contadores de Materiais */
+#contadorPente, #contadorSilenciador, #contadorEmpunhadora, #contadorMira, #contadorLanterna, #contadorMunicao {
+    width: 70px;
+}
+
+
+
+
+
